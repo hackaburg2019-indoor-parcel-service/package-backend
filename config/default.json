@@ -1,0 +1,8 @@
+{
+    "mongodb": {
+        "server": "localhost:27017",
+        "username": "tester",
+        "password": "test1234",
+        "database": "package-delivery"
+    }
+}

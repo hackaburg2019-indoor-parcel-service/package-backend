@@ -1,3 +1,4 @@
+import { IDevice } from './device';
 
 export interface IUser {
     id?: string | any;
@@ -7,5 +8,7 @@ export interface IUser {
     name: {
         firstname: string;
         lastname: string;
-    }
+    },
+    devices: IDevice[];
+    comparePassword: (checkingPassword: string, cb: (e: any, isMatch: any) => void) => void;
 }

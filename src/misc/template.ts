@@ -1,0 +1,5 @@
+
+
+export enum I18n {
+    ERR_DELIVERY_INVALID = 'E_DELIVERY_INVALID'
+}
