@@ -63,4 +63,8 @@ export namespace Logger {
         checkInitialized();
         logger.warn(message);
     };
+
+    export const getExpressLogger = () => {
+        return log4js.connectLogger(logger, { level: 'info'});
+    };
 }

@@ -4,5 +4,11 @@
         "username": "tester",
         "password": "test1234",
         "database": "package-delivery"
+    },
+    "express": {
+        "server": "0.0.0.0",
+        "port": 3000,
+        "version": "v1",
+        "token": "SDFJKLU)AF*(KJLSDF&*(#$$U()S)(#$&"
     }
 }
