@@ -1,0 +1,36 @@
+{
+  "name": "package-backend",
+  "version": "1.0.0",
+  "description": "Backend for the indoor delivery parcel service",
+  "main": "dist/index.js",
+  "scripts": {
+    "tslint": "tslint --project .",
+    "build": "tsc && npm run tslint",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hackaburg2019-indoor-parcel-service/package-backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hackaburg2019-indoor-parcel-service/package-backend/issues"
+  },
+  "_moduleAliases": {
+    "@home": "./dist"
+  },
+  "homepage": "https://github.com/hackaburg2019-indoor-parcel-service/package-backend#readme",
+  "dependencies": {
+    "express": "^4.17.0",
+    "module-alias": "^2.2.0",
+    "mongoose": "^5.5.11"
+  },
+  "devDependencies": {
+    "@types/express": "^4.16.1",
+    "@types/module-alias": "^2.0.0",
+    "@types/mongoose": "^5.5.1",
+    "tslint": "^5.16.0",
+    "typescript": "^3.4.5"
+  }
+}
