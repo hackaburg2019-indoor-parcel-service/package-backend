@@ -25,7 +25,7 @@ export namespace DeliveryController {
                 return next();
             }
 
-            const user = await User.findOne({ username: delivery.customer }).exec();
+            const user = await User.findOne({ username: delivery.customer.toLowerCase() }).exec();
 
             if (!user) {
                 res.data = {
