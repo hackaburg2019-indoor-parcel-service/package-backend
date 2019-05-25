@@ -7,7 +7,7 @@ import { IExpressConfig } from '@home/types';
 import { Logger } from '@home/core/utils';
 import { I18n, ExpressHandler } from '@home/misc';
 
-import { DeliveryRoute, AuthRouter } from '@home/routes';
+import { DeliveryRoute, AuthRouter, UserRouter } from '@home/routes';
 import lusca = require('lusca');
 import passport = require('passport');
 
@@ -56,6 +56,7 @@ export namespace ExpressService {
 
         app.use(`/${config.version}/delivery`, DeliveryRoute);
         app.use(`/${config.version}/auth`, AuthRouter);
+        app.use(`/${config.version}/profile`, UserRouter);
 
 
         app.use('*', ExpressHandler.express);
