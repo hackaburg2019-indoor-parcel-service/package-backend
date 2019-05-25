@@ -22,7 +22,7 @@ const deliveryOptions: mongoose.SchemaOptions = {
 
 const deliverySchema = new mongoose.Schema({
     user: { type: Schema.Types.ObjectId, required: true, ref: 'user' },
-    station: { type: Schema.Types.ObjectId, required: true, ref: 'station' },
+    station: { type: Schema.Types.ObjectId, required: true, ref: 'Station' },
     lockNumber: { type: Number, required: true },
     picked: {type: Boolean, required: false, default: false },
     token: { type: String, required: true },

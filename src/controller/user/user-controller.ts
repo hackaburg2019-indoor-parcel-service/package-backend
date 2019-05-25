@@ -6,7 +6,7 @@ export namespace UserController {
 
     export const getOpenDeliveries = async (req: Request, res: Response, next: NextFunction) => {
         try {
-            const deliveries = await Delivery.find({ user: req.user, picked: false });
+            const deliveries = await Delivery.find({ user: req.user, picked: false }).populate('station').exec();
 
             res.data = {
                 code: HttpCodes.OK,
