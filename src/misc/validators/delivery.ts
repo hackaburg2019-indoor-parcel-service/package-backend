@@ -12,4 +12,11 @@ export namespace DeliveryValidator {
             ExpressHandler.validateBody
         ];
     };
+
+    export const newPickup = (): RequestHandler[] => {
+        return [
+            check('token', I18n.WARN_INVALID_PARAMS).isString(),
+            ExpressHandler.validateBody
+        ];
+    };
 }

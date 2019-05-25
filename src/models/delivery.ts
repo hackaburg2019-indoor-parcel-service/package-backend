@@ -26,23 +26,19 @@ const deliverySchema = new mongoose.Schema({
     lockNumber: { type: Number, required: true },
     picked: {type: Boolean, required: false, default: false },
     token: { type: String, required: true },
-    delivered: { type: Date }
+    delivered: { type: Date },
+    pickDate: { type: Date }
 }, deliveryOptions);
 
-deliverySchema.pre('validate', async function() {
+deliverySchema.pre('save', async function() {
     const newDocument: IDeliveryModel = <IDeliveryModel> this;
 
     try {
-        // if (newDocument.delivered) {
-        //     throw new PackageError('Delivered is provided', ErrorCode.DELIVERED_INVALID);
-        // }
-        // if (newDocument.token) {
-        //     throw new PackageError('Token provided', ErrorCode.DELIVERED_INVALID);
-        // }
-
-        // TODO: Check station if number is valid
         const station = await Station.findById(newDocument.station).exec();
 
+        if (newDocument.pickDate) {
+            throw new PackageError(I18n.WARN_DELIVERY_PICKDATE_PROVIDED);
+        }
         if (!station) {
             throw new PackageError(I18n.WARN_STATION_NOT_FOUND);
         }
