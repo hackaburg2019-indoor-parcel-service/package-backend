@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/hackaburg2019-indoor-parcel-service/package-backend#readme",
   "dependencies": {
-    "bcrypt": "^3.0.6",
+    "bcrypt": "^5.0.0",
     "body-parser": "^1.19.0",
     "compression": "^1.7.4",
     "config": "^3.1.0",
